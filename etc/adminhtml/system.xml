@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="foobar_saml_customer" sortOrder="302" translate="label" type="text" showInDefault="1"
+                 showInWebsite="1" showInStore="1">
+            <group id="advanced" translate="label comment" type="text" sortOrder="9" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <field id="enabled_for_manitou" type="select" sortOrder="994" showInDefault="1" showInWebsite="1"
+                       showInStore="0">
+                    <label>enable group assignment for manitou only</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <comment>
+                        <![CDATA[Enable it for Manitou only, when enabled = custom code will do group assignment for Manitou specifically, do not use group mapping on Manitou]]>
+                    </comment>
+                </field>
+                <field id="manitou_api_key" type="obscure" sortOrder="995" showInDefault="1" showInWebsite="0"
+                       showInStore="0">
+                    <label>Api Key</label>
+                    <validate>required-entry</validate>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                    <depends>
+                        <field id="enabled_for_manitou">1</field>
+                    </depends>
+                </field>
+
+                <field id="manitou_from" translate="label" type="select" sortOrder="996" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Send From</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                    <depends>
+                        <field id="enabled_for_manitou">1</field>
+                    </depends>
+                </field>
+                <field id="manitou_copy_to" type="text" sortOrder="997" showInDefault="1" showInWebsite="0"
+                       showInStore="0">
+                    <label>Send Denied Access Email Copy To</label>
+                    <validate>required-entry validate-emails</validate>
+                    <comment>Comma-separated.</comment>
+                    <depends>
+                        <field id="enabled_for_manitou">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Foobar\SAML\Controller\Saml2\ACS">
+        <plugin name="ManitouAfterControllerSamlACS" type="Jvdh\ManitouSsoProcessing\Plugin\Controller\Saml2\ACS"
+                sortOrder="2"/>
+    </type>
+</config>

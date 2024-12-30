@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <foobar_saml_customer>
+            <advanced>
+                <enabled_for_manitou>0</enabled_for_manitou>
+                <manitou_from>general</manitou_from>
+            </advanced>
+        </foobar_saml_customer>
+    </default>
+</config>

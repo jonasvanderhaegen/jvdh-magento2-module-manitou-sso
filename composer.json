@@ -1,0 +1,21 @@
+{
+  "name": "jvdh/module-manitou-sso",
+  "version": "1.0.0",
+  "description": "N/A",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "sixtomartin/onelogin-module-saml2-extend": "1.9.*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Jvdh\\ManitouSso\\": ""
+    }
+  }
+}

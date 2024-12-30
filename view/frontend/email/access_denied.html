@@ -1,0 +1,32 @@
+<!--@subject {{trans "Manitou SSO: Access denied" }} @-->
+<!--@vars {
+"var first_name":"First name",
+"var last_name":"Last name",
+"var email":"Email address",
+"var time":"time of execution"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<div>
+    <span>{{trans "Error alert: An attempt to create an account was unsuccessful due to a technical issue or missing information."}}</span>
+    <span>{{trans "The following information has been provided about the user:"}}</span>
+</div>
+<br></br>
+
+<table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+    <tr>
+        <td valign="top">
+            <strong>{{trans "Name"}}:</strong>&nbsp;
+            <span>{{var first_name}} {{var last_name}}</span><br></br>
+
+            <strong>{{trans "E-mail"}}:</strong>&nbsp;
+            <span>{{var email}}</span><br></br>
+
+            <strong>{{trans "Time:"}}</strong>&nbsp;
+            <span>{{var time}}</span><br></br>
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="manitou_sso_access_denied_template" label="Manitou sso access denied" file="access_denied.html"
+              type="html" module="Jvdh_ManitouSsoProcessing" area="frontend"/>
+</config>
